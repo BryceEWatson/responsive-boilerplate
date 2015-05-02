@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no"/>
+		<link rel="Stylesheet" type="text/css" HREF="./scrollable-panels/style.css" />
+	</head>
+	<body>
+		<h1>scrollable-panels</h1>
+		<div class="scrollable-panels-parent">
+			<div class="scrollable-panels-scroll-parent">
+				<div class="scrollable-panels-image-parent">
+					<img class="scrollable-panels-image" draggable="false" alt="image alt" src="http://i.ebayimg.com/00/s/NDExWDMwMA==/z/r58AAOSwajVUQS0q/$_57.JPG?set_id=80000000000"/>
+				</div>
+				<div class="scrollable-panels-image-parent">
+					<img class="scrollable-panels-image" draggable="false" alt="image alt" src="http://i.ebayimg.com/00/s/NDExWDMwMA==/z/TA0AAOSwEppUQTa2/$_57.JPG?set_id=80000000000"/>
+				</div>
+				<div class="scrollable-panels-image-parent">
+					<img class="scrollable-panels-image" draggable="false" alt="image alt" src="http://i.ebayimg.com/00/s/NDExWDMwMA==/z/4HcAAOSwajVUSTRd/$_57.JPG?set_id=80000000000"/>
+				</div>
+				<div class="scrollable-panels-image-parent">
+					<img class="scrollable-panels-image" draggable="false" alt="image alt" src="http://i.ebayimg.com/00/s/NDExWDMwMA==/z/rtoAAOSw6EhUSThm/$_57.JPG?set_id=80000000000"/>
+				</div>
+				<div class="scrollable-panels-image-parent">
+					<img class="scrollable-panels-image" draggable="false" alt="image alt" src="http://i.ebayimg.com/00/s/NDExWDMwMA==/z/TiQAAOSwr81USTT7/$_57.JPG?set_id=80000000000"/>
+				</div>
+				<div class="scrollable-panels-image-parent">
+					<img class="scrollable-panels-image" draggable="false" alt="image alt" src="http://i.ebayimg.com/00/s/NDExWDMwMA==/z/LtgAAOSwY45USTjK/$_57.JPG?set_id=80000000000"/>
+				</div>
+				<div class="scrollable-panels-image-parent">
+					<img class="scrollable-panels-image" draggable="false" alt="image alt" src="http://i.ebayimg.com/00/s/NDExWDMwMA==/z/JzsAAOSwDN1UQTDF/$_57.JPG?set_id=80000000000"/>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./third-party/iscroll/iscroll.js"></script>
+		<script>
+			(function() {
+
+				function clickOrTouch() {
+			        return ('ontouchstart' in document.documentElement) ? 'touchend' : 'click';
+			    }
+				var preventDefault = false;
+		        if (clickOrTouch() === 'click') {
+		            preventDefault = true;
+		        }
+				var myScroll = new IScroll('.scrollable-panels-parent', {
+	            	eventPassthrough: true,
+	                scrollX: true,
+	                scrollY: false,
+	                snap: 'div',
+	                snapSpeed: 700,
+	                snapThreshold: 0.234,
+	                bounce: true,
+	                momentum: false,
+	                click: true, 
+	        		preventDefault: preventDefault
+	            });
+			})();
+		</script>
+	</body>
+</html>
