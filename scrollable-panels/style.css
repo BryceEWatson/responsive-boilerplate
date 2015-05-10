@@ -6,6 +6,9 @@ body {
 .scrollable-panels-parent {
 	width: 100%;
 	height: 411px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 .scrollable-panels-scroll-parent {
 	height: 100%;
